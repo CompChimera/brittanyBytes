@@ -1,0 +1,47 @@
+<html ng-app="brittanyBytes">
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script src="js/controllers.js"></script>
+    <script src="js/template.js"></script>
+	<style>
+		p {
+		font-family: "Lucida Console",Monaco, monospace;
+		} 
+		#wrapper{
+			width: 60%;
+			align: center;
+			border: solid purple 2px transparent;
+			margin: auto;
+		}
+	</style>
+	</head>
+	<body ng-controller="AboutPage">
+		<!-- Header Image -->
+		<div align="center"><p><img src="images/BrittanyBtyes.png"/>		</p></div>
+		<br/>
+		<!-- Navigation -->
+		<div id="wrapper" style="height: auto;">
+			<div style="float: left; background-color: rgb(146,102,204); height: auto;">
+			<ul>
+				<li ng-repeat="link in navigation">
+					<span><a href="{{link.url}}">{{link.title}}</a></span>
+				</li>
+			</ul>
+			</div>
+		
+			<!-- Content -->
+			<div style="padding-left:40px; background-color: rgb(146,102,204)">
+				<ul>
+					<li ng-repeat="school in schools"><span>{{school.name}}</span>
+					<!--<p>{{school.degree}}</p>-->
+					</li>
+					
+				</ul>
+			</div>
+			<br/>
+			<div style="float:clear; height: 20px;"></div>
+		</div>
+		<!-- Footer -->
+		<div style="color: rgb(146,102,204); margin:auto; border: solid purple 1px transparent; width: 50%;"><p>Created by Brittany Kelly</p></div>
+	<body>
+</html>
